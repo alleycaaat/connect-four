@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Connect Four by AC Hulslander</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Connect Four</h1>
+            </div>
+            <div class="mobileRules">
+                <button id="rules">Read game rules</button>
+                <p id="mobileRules" class="hide">
+                    Connect Four is a two player game. Players take turns
+                    dropping pucks into the columns where they fall straight
+                    down to the next available space. A player wins by
+                    connecting four of their pucks in a row (horizontally,
+                    vertically or diagonally), before their opponent does. Good
+                    luck!
+                </p>
+            </div>
+            <div class="rules">
+                <p>
+                    Connect Four is a two player game. Players take turns
+                    dropping pucks into the columns where they fall straight
+                    down to the next available space. A player wins by
+                    connecting four of their pucks in a row (horizontally,
+                    vertically or diagonally), before their opponent does. Good
+                    luck!
+                </p>
+            </div>
+            <main class="gameboard"></main>
+            <div class="misc">
+                <div class="timing">
+                    <button id="reset">RESET</button>
+                    <div class="timer-container">
+                        <p>
+                            <span id="minutes">00</span>
+                            :
+                            <span id="seconds">00</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="players">
+                    <span class="checkWrap">
+                        <img
+                            src="/img/checkmark.svg"
+                            class="checkmark"
+                            alt="checkmark"
+                        />
+                    </span>
+                    <div class="current-player purple"></div>
+                    <span class="checkWrap">
+                        <img
+                            src="/img/checkmark.svg"
+                            class="checkmark hide"
+                            alt="checkmark"
+                        />
+                    </span>
+                    <div class="current-player yellow"></div>
+                </div>
+                <h2 class="hide"></h2>
+                <div class="credit">
+                    <p>
+                        Created by
+                        <a href="https://achulslander.com/" target="_blank"
+                            >AC Hulslander</a
+                        >
+                    </p>
+                    <p>View this project on:</p>
+                    <p>
+                        <a
+                            href="https://github.com/alleycaaat/connect-four"
+                            target="_blank"
+                        >
+                            GitHub
+                        </a>
+                        |
+                        <a
+                            href="https://codepen.io/alleycaaat/full/oNqOxzG"
+                            target="_blank"
+                        >
+                            codepen
+                        </a>
+                        |
+                        <a
+                            href="https://achulslander-connect-four.netlify.app"
+                            target="_blank"
+                        >
+                            Netlify
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="idx.js" async defer></script>
+    </body>
+</html>
