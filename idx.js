@@ -125,7 +125,7 @@ const handlePuck = (puck) => {
             bottomPuck.setAttribute('name', `${player}`);
             bottomPuck.classList.add(`${player}`);
             //check for a winner
-            if (turns > 6) {
+            if (turns > 2) {
                 gameWon(i, y, bottomPuck);
             }
             return;
@@ -139,7 +139,8 @@ const gameWon = (x, y, player) => {
     return (
         checkGame(x, y, player, 'horizontal') ||
         checkGame(x, y, player, 'vert') ||
-        checkGame(x, y, player, 'diag')
+        checkGame(x, y, player, 'diag') ||
+        checkGame(x, y, player, 'diag2')
     );
 };
 
@@ -170,6 +171,11 @@ const checkGame = (sx, sy, player, direction) => {
             diag: [
                 [-1, -1],
                 [1, 1],
+            ],
+            //diagonal needs to be split to check each direction separately
+            //or it will inciment the puckcount incorrectly for how the
+            //rules of the game work
+            diag2: [
                 [-1, 1],
                 [1, -1],
             ],
