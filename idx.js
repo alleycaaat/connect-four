@@ -50,6 +50,7 @@ board.forEach((rows, rowIndex) => {
         const puck = document.createElement('button');
         puck.setAttribute('id', `row: ${rowIndex} -- col: ${colIndex}`);
         puck.setAttribute('name', 'empty');
+        puck.setAttribute('aria-label', `row: ${rowIndex} -- col: ${colIndex}`);
         puck.classList.add('puck');
         puck.addEventListener('click', () => handlePuck(puck));
         //add pucks to the rows
