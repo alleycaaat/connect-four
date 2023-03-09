@@ -1,24 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link
+            rel='apple-touch-icon'
+            sizes='180x180'
+            href='https://ach-photos.netlify.app/achulslander/apple-touch-icon.png'>
+        <link
+            rel='icon'
+            type='image/png'
+            sizes='32x32'
+            href='https://ach-photos.netlify.app/achulslander/favicon-32x32.png'>
+        <link
+            rel='icon'
+            type='image/png'
+            sizes='16x16'
+            href='https://ach-photos.netlify.app/achulslander/favicon-16x16.png'>
+        <!-- Primary Meta Tags -->
         <title>Connect Four by AC Hulslander</title>
+        <meta name='title' content='AC Hulslander - Front End Developer'>
         <meta
-            name="description"
-            content="Connect Four - digital version of the classic board game"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="style.css" />
+            name='description'
+            content='AC Hulslander`s personal website offers her portfolio of
+            web development projects and a list of her web design and web
+            development services for freelance work.'>
+
+        <!-- Open Graph / Facebook -->
+        <meta property='og:type' content='website'>
+        <meta property='og:url' content='https://achulslander.com/'>
+        <meta
+            property='og:title'
+            content='AC Hulslander - Front End Developer'>
+        <meta
+            property='og:description'
+            content='AC Hulslander`s personal website offers her portfolio of
+            web development projects and a list of her web design and web
+            development services for freelance work.'>
+        <meta
+            property='og:image'
+            content='https://ach-photos.netlify.app/achulslander/portfolio.png'>
+        <!-- Twitter -->
+        <meta property='twitter:card' content='summary_large_image'>
+        <meta property='twitter:url' content='https://achulslander.com/'>
+        <meta
+            property='twitter:title'
+            content='AC Hulslander - Front End Developer'>
+        <meta
+            property='twitter:description'
+            content='AC Hulslander`s personal website offers her portfolio of
+            web development projects and a list of her web design and web
+            development services for freelance work.'>
+        <meta
+            property='twitter:image'
+            content='https://ach-photos.netlify.app/achulslander/portfolio.png'>
+        <meta name='msapplication-TileColor' content='#00aba9'>
+        <meta name='theme-color' content='#ffffff'>
+        <link rel='stylesheet' href='style.css' />
     </head>
     <body>
-        <div class="container">
-            <div class="header">
+        <main class='container'>
+            <div class='header'>
                 <h1>Connect Four</h1>
             </div>
-            <div class="mobileRules">
-                <button id="rules">Read game rules</button>
-                <p id="mobileRules" class="hide">
+            <section id='rules' class='mobileRules'>
+                <button id='rules'>Read game rules</button>
+                <p id='mobileRules' class='hide'>
                     Connect Four is a two player game. Players take turns
                     dropping pucks into the columns where they fall straight
                     down to the next available space. A player wins by
@@ -26,8 +74,8 @@
                     vertically or diagonally), before their opponent does. Good
                     luck!
                 </p>
-            </div>
-            <div class="rules">
+            </section>
+            <section id='rules' class='rules'>
                 <p>
                     Connect Four is a two player game. Players take turns
                     dropping pucks into the columns where they fall straight
@@ -36,68 +84,62 @@
                     vertically or diagonally), before their opponent does. Good
                     luck!
                 </p>
-            </div>
-            <main class="gameboard"></main>
-            <div class="misc">
-                <div class="timing">
-                    <button id="reset">RESET</button>
-                    <div class="timer-container">
+            </section>
+            <section id='gameboard' class='gameboard'></section>
+            <div class='misc'>
+                <section id='timing' class='timing'>
+                    <button id='reset'>RESET</button>
+                    <div class='timer-container'>
                         <p>
-                            <span id="minutes">00</span>
+                            <span id='minutes'>00</span>
                             :
-                            <span id="seconds">00</span>
+                            <span id='seconds'>00</span>
                         </p>
                     </div>
-                </div>
-                <div class="players">
-                    <span class="checkWrap">
+                </section>
+                <section id='players' class='players'>
+                    <span class='checkWrap'>
                         <img
-                            src="https://achulslander.com/img/checkmark.svg"
-                            class="checkmark"
-                            alt="checkmark to indicate current player"
-                        />
+                            src='https://ach-photos.netlify.app/connect-four/checkmark.svg'
+                            class='checkmark'
+                            alt='checkmark to indicate current player'
+                            />
                     </span>
-                    <div class="current-player purple"></div>
-                    <span class="checkWrap">
+                    <div class='current-player purple'></div>
+                    <span class='checkWrap'>
                         <img
-                            src="https://achulslander.com/img/checkmark.svg"
-                            class="checkmark hide"
-                            alt="checkmark to indicate current player"
-                        />
+                            src='https://ach-photos.netlify.app/connect-four/checkmark.svg'
+                            class='checkmark hide'
+                            alt='checkmark to indicate current player'
+                            />
                     </span>
-                    <div class="current-player yellow"></div>
-                </div>
-                <h2 class="hide"></h2>
-                <div class="credit">
+                    <div class='current-player yellow'></div>
+                </section>
+                <h2 class='hide'></h2>
+                <div class='credit'>
                     <p>
                         Created by
-                        <a href="https://achulslander.com/" target="_blank"
-                            >AC Hulslander</a
-                        >
+                        <a href='https://achulslander.com/' target='_blank'>AC
+                            Hulslander</a>
                     </p>
                     <p>View this project on:</p>
                     <p>
                         <a
-                            href="https://github.com/alleycaaat/connect-four"
-                            target="_blank"
-                            >GitHub</a
-                        >
+                            href='https://github.com/alleycaaat/connect-four'
+                            target='_blank'>GitHub</a>
                         |
                         <a
-                            href="https://codepen.io/alleycaaat/full/oNqOxzG"
-                            target="_blank"
-                            >codepen</a
-                        >
+                            href='https://codepen.io/alleycaaat/full/oNqOxzG'
+                            target='_blank'>codepen</a>
                         |
                         <a
-                            href="https://achulslander-connect-four.netlify.app"
-                            target="_blank"
-                            >Netlify
+                            href='https://achulslander-connect-four.netlify.app'
+                            target='_blank'>Demo
                         </a>
                     </p>
                 </div>
             </div>
-        </div>
-        <script src="idx.js" async defer></script>
+        </main>
+        <script src='idx.js' async defer></script>
     </body>
 </html>

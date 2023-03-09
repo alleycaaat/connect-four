@@ -48,9 +48,9 @@ board.forEach((rows, rowIndex) => {
     row.classList.add('row');
     board.forEach((cols, colIndex) => {
         const puck = document.createElement('button');
-        puck.setAttribute('id', `row: ${rowIndex} -- col: ${colIndex}`);
+        puck.setAttribute('id', `row: ${ rowIndex } -- col: ${ colIndex }`);
         puck.setAttribute('name', 'empty');
-        puck.setAttribute('aria-label', `row: ${rowIndex} -- col: ${colIndex}`);
+        puck.setAttribute('aria-label', `row: ${ rowIndex } -- col: ${ colIndex }`);
         puck.classList.add('puck');
         puck.addEventListener('click', () => handlePuck(puck));
         //add pucks to the rows
@@ -102,7 +102,7 @@ const handlePuck = (puck) => {
         topPuck,
         bottomPuck;
     //check if the column is already full
-    topPuck = document.getElementById(`row: ${0} -- col: ${y}`);
+    topPuck = document.getElementById(`row: ${ 0 } -- col: ${ y }`);
     if (topPuck.name !== 'empty') {
         message.classList.remove('hide');
         return (message.innerHTML = 'Column full, select another');
@@ -119,14 +119,14 @@ const handlePuck = (puck) => {
     }
     turns++;
     //start on the bottom row to find the first open puck
-    for (let i = 5; i >= 0; ) {
-        bottomPuck = document.getElementById(`row: ${i} -- col: ${y}`);
+    for (let i = 5; i >= 0;) {
+        bottomPuck = document.getElementById(`row: ${ i } -- col: ${ y }`);
         //once an empty puck is found, set it to current player
         if (bottomPuck.name === 'empty') {
-            bottomPuck.setAttribute('name', `${player}`);
-            bottomPuck.classList.add(`${player}`);
+            bottomPuck.setAttribute('name', `${ player }`);
+            bottomPuck.classList.add(`${ player }`);
             //check for a winner
-            if (turns > 2) {
+            if (turns > 6) {
                 gameWon(i, y, bottomPuck);
             }
             return;
@@ -147,12 +147,12 @@ const gameWon = (x, y, player) => {
 
 //check if the puck has been used
 const isUsed = (x, y) => {
-    let puck = document.getElementById(`row: ${x} -- col: ${y}`);
+    let puck = document.getElementById(`row: ${ x } -- col: ${ y }`);
     return puck !== null;
 };
 //check if the current player has the puck
 const colorMatch = (x, y, color) => {
-    let puck = document.getElementById(`row: ${x} -- col: ${y}`);
+    let puck = document.getElementById(`row: ${ x } -- col: ${ y }`);
     return puck.name === color;
 };
 //x and y are strings when sent in
@@ -200,7 +200,7 @@ const checkGame = (sx, sy, player, direction) => {
                 players.classList.add('hide');
                 message.classList.remove('hide');
                 clearInterval(timer);
-                return (message.innerHTML = `${color} wins!`);
+                return (message.innerHTML = `${ color } wins!`);
             }
         }
     });

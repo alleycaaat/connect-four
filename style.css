@@ -10,6 +10,10 @@ body {
   background-color: darkGrey;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -32,10 +36,6 @@ body {
   border-radius: 15px;
   background-color: lightGrey;
   max-width: 490px;
-}
-
-button {
-  cursor: pointer;
 }
 
 .rules,
@@ -65,7 +65,6 @@ button {
   margin: 5px auto;
   width: 70vw;
   max-width: 490px;
-  height: 15vh;
   height: auto;
 }
 
